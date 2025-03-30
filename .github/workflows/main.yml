@@ -16,5 +16,8 @@ jobs:
         run: pip install yfinance pandas smtplib
       - name: Run Script
         run: python market_report.py
+      - name: Debug SMTP
+        run: python -c "import smtplib; print('SMTP works!')"
+
 
 # Test change
