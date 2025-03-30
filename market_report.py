@@ -10,6 +10,7 @@ Original file is located at
 !pip install schedule
 
 !pip install yfinance pandas
+!pip install smtplib
 
 import yfinance as yf
 import pandas as pd
