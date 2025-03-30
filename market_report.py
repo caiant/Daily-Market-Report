@@ -135,6 +135,3 @@ def schedule_task():
 # Run the scheduler
 schedule_task()
 
-
-git commit --allow-empty -m "Trigger workflow"
-git push origin main
