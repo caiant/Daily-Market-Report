@@ -1,0 +1,17 @@
+name: Daily Market Report
+on:
+  schedule:
+    - cron: '30 11 * * *'  # 7:30 AM EST (convert to UTC)
+jobs:
+  run_script:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.x'
+      - name: Install Dependencies
+        run: pip install yfinance pandas smtplib
+      - name: Run Script
+        run: python market_report.py
