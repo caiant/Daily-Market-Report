@@ -122,16 +122,5 @@ def send_email():
     except Exception as e:
         print(f"❌ Error sending email: {e}")
 
-# Schedule to run at 7:30 AM EST daily
-def schedule_task():
-    est = pytz.timezone("America/New_York")
-    schedule.every().day.at("07:30", est).do(send_email)
-
-    print("⏳ Waiting for the scheduled time...")
-    while True:
-        schedule.run_pending()
-        time.sleep(60)
-
-# Run the scheduler
-schedule_task()
+send_email()
 
